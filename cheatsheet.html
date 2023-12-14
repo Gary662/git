@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cstyles.css">
+    <title>Html Cheatsheet</title>
+</head>
+<body>
+    <nav>
+        <h1 class="logo"></h1>
+        <ul id="sidemenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hobbies.html">Hobbies/Interests</a></li>
+            <li><a href="cheatsheet.html">Cheatsheet</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-bars" onclick="openmenu()"></i>
+    </nav>
+
+
+    <h1 id="Cheatsheet">HTML Cheatsheet</h1>
+    <div class="container">
+    <div1 class="column">
+    <h2 id="summary tags">Document Summary Tags</h2>
+    <h3>&lt;!DOCTYPE html&gt;</h3>
+    <p>This tag is not an HTML tag, but a declaration declares that document is HTML5.
+        It is DTD(Document Type Declaration) Modern browsers interprets HTML5 without <br>
+        DTD but still it is best practice to start webpage with&lt;!DOCTYPE html&gt;</p>
+        <h3>Nuggets:</h3>
+        <ul>
+            <li>It is not HTML tag.</li>
+            <li>Case-insensitive.</li>
+            <li>Helps browser to display webpage correctly</li>
+        </ul>
+        <h3 id="html">&lt;html&gt; … &lt;/html&gt;</h3>
+        <p>This tag is the root element/tag for page.</p>
+        
+        <h3>Nuggets:</h3>
+        <ul>
+            <li>Must be used a parent or root tag.</li>
+            <li>Presence of &lt;html&gt; … &lt;/html&gt;tag confirms that document is HTML page</li>
+            <li>Must contain &lt;head&gt; … &lt;/head&gt;, &lt;title&gt; … &lt;/title&gt;   and &lt;<br>
+                body&gt; … &lt;/body&gt;.</li>
+        </ul>
+        
+        <h3 id="head">&lt;head&gt; … &lt;/head&gt;</h3>
+        
+        <p>This tag is used to specify meta-data about HTML page and dependencies files. Some meta-datas
+           like: description, keywords, author, viewport and http-equiv etc. It also contains tags like <br>
+           link and script for including dependencies files for CSS, JavaScript and font-usages etc.</p>
+        <h3>Nuggets:</h3>
+     <ul>
+        <li>Must be first child of HTML tag.</li>
+        <li>&lt;head&gt; … &lt;/head&gt; is the first element loaded by browser, hence all essential
+         linking/dependencies and sourcing of JavaScript must be included inside this tag.</li>
+    </ul>
+        <h3 id="title">&lt;title&gt; … &lt;/title&gt;</h3>
+        <p>This tag contains name/title of the page. It is the name visible at the title’s bar or tab
+           bar of browser.</p>
+        <h3>Nuggets:</h3>
+    <ul>
+            <li>Search Engines use title as one of the most important parameter for indexing webpage.
+                Hence, a relevant and informative title helps improving ranking of your webpage.
+            </li>
+            <li>Assigning precise yet descriptive title to webpage is essential and useful for user, search
+                engine as well as web developer</li>
+            <li>While saving a webpage into local disk, the default name given to file is title</li>
+    </ul>
+        <h3 id="body">&lt;body&gt; … &lt;/body&gt;</h3>
+
+        <p>This tag contains all elements which are intended to be displayed on page. It is the parent container
+           for all contents or elements of the page</p>
+        
+    <h3>Nuggets:</h3>
+    <ul>
+        <li>Elements in webpage are rendered in the order of their existence inside &lt;body&gt; unless altered
+            using CSS or JavaScript.</li>
+                    
+        <li>Modularization of elements inside &lt;body&gt; tag is an art and differentiates professional web
+           developer with others. Modularisation using &lt;section&gt;, &lt;header&gt;, &lt;footer&gt; and <br>
+           customized containers is good practice.</li>
+    </ul>
+    <h2 id="Example">Example</h2>
+    <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;body&gt;
+    &lt;title&gt;Document Title&lt;/title&gt;
+    &lt;meta name="keywords" content="Tutorial, reference, cheat sheet"&gt;
+    &lt;link rel="stylesheet" href="./css/libs/fontawesome/4.6.3/css/font-awesome.min.css"&gt;
+    &lt;script src="./js/libs/jquery.min_3.3.1.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    Body of webpage.
+                
+    &lt;/body&gt;
+    &lt;/html&gt;
+    </pre>
+        </div1>
+
+    <div2 class="column2">                    
+        
+        <h2 id="Document info tags">Document Information Tags</h2>
+
+        <h3>&lt;base&gt; … &lt;/base&gt;</h3>
+
+        <p>This tag is used to specify base URL/target of webpage for all relative URLs of a webpage. 
+           It also acts as default URL and a default target for the links in webpage in case there is<br>
+           broken link.
+        </p>
+        <h3>Nuggets:</h3>
+        <ul>
+            <li>Using &lt;base&gt; tag will make website design easyto maintain and lesser prone to link mismatch.</li>
+            <li>Should be inside &lt;head&gt; tag</li>
+            <li>Presence of &lt;base&gt;> tag ensures a default landing page for your webpage.</li>
+        </ul>
+    <pre>
+    &lt;head&gt;
+    &lt;base&gt;
+    &lt;base href=http://snippetnuggets.com/cheatsheets/index.html“ target=”_blank”&gt;
+    &lt;/head&gt;
+    </pre>
+        
+    <h3 id="meta">&lt;meta&gt; … &lt;/meta&gt;</h3>
+        
+    <p>This tag is for providing information/data about the webpage. Modern webpages need some additional
+       information which are not rendered in UI, but are useful for Browser and Search Engines to understand<br> 
+       webpage in a better way.</p>
+    <h3>Nuggets:</h3>
+           
+    <ul>
+        <li>Should be inside &lt;head&gt; tag.</li>
+        <li>Passed as name/value pairs.</li>
+        <li>5 meta-tags are: ‘keywords’, ‘description’, author’, ‘viewport’ and ‘http-equiv’.</li>
+        <li>For setting character encoding for webpage we use &lt;meta charset=”UTF-8”&gt; or &lt;meta
+            httpequiv="Content-Type" content="text/html;charset=UTF-8"&gt;
+        </li>
+    </ul>
+    <pre>
+        &lt;head&gt;
+        &lt;meta name="keywords" content="Tutorial, reference, cheat
+        sheet "&gt;
+        &lt;meta name="description" content="Contains quick reference
+        for HTML tags "&gt;
+        &lt;meta name="author" content="Prakash Sao"&gt;
+        &lt;meta name="viewport" content="width=device-width,
+        initial-scale=1.0"&gt;
+        &lt;meta name="http-equiv " content="30"&gt;
+        &lt;/head&gt;
+            
+    </pre>
+        <h3>&lt;link&gt; … &lt;/link&gt;</h3>
+        <p>This tag is used to link resources like CSS and fonts which are external to the webpage.</p>
+        
+        <h3>Nuggets:</h3>
+    <ul>
+        <li>Using &lt;base&gt; tag will make website design easy to maintain and lesser prone to link mismatch.</li>
+    </ul>
+    <pre>
+        &lt;head&gt;
+        &lt;link rel="stylesheet" type="text/css" href="theme.css"&gt;
+        &lt;/head&gt;
+    </pre>
+    
+    <h3 id="style">&lt;style&gt; … &lt;/style&gt;</h3>
+    <p>This tag is used when you don’t want to use &lt;link&gt; tag to add external resources into your webpage,
+       instead you want to place CSS inside your HTML page.</p>
+
+    <h3>Nuggets:</h3>
+    <ul>
+        <li>When there are only few CSS properties needed, it is adviced to use in-file CSS using &lt;style&gt;
+            tag instead of maintaining an external CSS file and linking it using &lt;link&gt; tag
+        </li>
+    </ul>
+    <pre>
+        &lt;head&gt;
+        &lt;style&gt;
+        h1{ color: blue;}
+        .paragraph_class{font-color: grey;}
+        &lt;style&gt;
+        &lt;head&gt;
+    </pre>
+        <h3 id="script">&lt;script&gt; … &lt;script&gt;</h3>
+        <p>This tag is used to define a client-side JavaScript.Webpage either contains JavaScript inside
+            &lt;script&gt;tag or uses &lt;script&gt; tag with ‘src’ attribute to point external javaScript file.</p>
+        <h3>Nuggets:</h3>
+    <ul>
+        <li>JavaScript code are used to manipulate webpage, form validation and alteration of element based on
+            User’s choice.<br>It enables us to access any of the DOM elements of webpage and undertake varieties <br>
+            of actions on them. It is always a good practice to maintain an external JavaScript unless webpage
+            contains just few JavaScript statements which can better be included using &lt;script&gt; tag in webpage<br>
+            itself</li>
+        <li>Better if included inside &lt;head&gt; so that JavaScript statements get loaded quickly.</li>
+    </ul>
+    <pre>
+        &lt;head&gt;
+        &lt;script&gt;
+        document.getElementById("demo").innerHTML = "Hello
+        JavaScript!";
+        &lt;/script&gt;
+        &lt;/head&gt;
+    </pre>
+        
+    <h3 id="noscript"> &lt;noscript&gt; … &lt;/noscript&gt;</h3>
+    <p>This tag is used to provide an alternate message or content for users if the browser doesn’t support
+     clientside JavaScripts.</p>
+        <h3>Nuggets:</h3>
+    <ul>
+       <li>It is advised to include &lt;noscript&gt; messages for informing user about their browser setting
+           instead of showing them broken page.</li>
+    </ul>
+    <pre>&lt;head&gt;
+        &lt;script&gt;
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+        &lt;/script&gt;
+        &lt;noscript&gt;Your browser does not support
+        JavaScript!&lt;/noscript&gt;
+        &lt;/head&gt;
+    </pre>
+        </div2>
+
+    <div3 class="column3">
+
+    <h2>Document Structuring Tags</h2>
+    <h3>&lt;h1..h6&gt; … &lt;/h1..h6&gt;</h3>
+    <p>HTML supports six levels of headings from h1(largest) to h6 (smallest). One can further customize their 
+       size/color/font through CSS.</p>
+    <h3>&lt;p&gt; … &lt;/p&gt;</h3>
+    <p>This tag is used to define a paragraph.</p>
+
+    <h3>Nuggets:</h3>
+    <ul>
+        <li>Heading is given importance during indexing of webpage by Search Engines. Also, headings are used to
+            categorize webpage in a better way so that User find it easy to browse through document structure. Hence,<br>
+            Heading should be given due importance.
+        </li>
+    </ul>
+    <pre>
+        &lt;div class="myClass"&gt;
+        &lt;h1&gt;Largest heading&lt;/h1&gt;
+        &lt;h6&gt;Smallest heading&lt;/h6&gt;
+        &lt;p&gt;This is paragraph displaying fruits color:
+        &lt;span style="color: red"&gt;red apple&lt;/span&gt; and&lt;span style="color: yellow;"&gt;yellow mango &lt;/span&gt;
+        &lt;/p&gt;
+        &lt;/hr&gt;
+        &lt;/br&gt;
+        &lt;/div&gt;
+    </pre>
+        <h3>&lt;div&gt; … &lt;/div&gt;</h3>
+        <p>This tag divides webpage into different blocks or sections by enclosing element(s) inside &lt;div&gt;
+           which has to be shown as one block.</p>
+        <h3>Nuggets:</h3>
+    <ul>
+        <li>&lt;div&gt; tag is used to design an efficient layout of webpage. Assigning an unique id and class
+            to a &lt;div&gt; and providing style for it is common practice.&lt;/li&gt;</li>
+        <li>All browser treats &lt;div&gt; as a block and places it after line break. However, this behavior<br>
+            can be changed using desirable CSS.</li>    
+    </ul>
+        <h3>&lt;span&gt;…&lt;/span&gt;</h3>
+        <p>Used to group inline-elements in webpage, unlike &lt;div&gt; tag which by default places line break before it.</p>
+        <h3>Nuggets:</h3>
+    <ul>
+        <li>&lt;span&gt;tag is mostly used with text data like, formatting different part of paragraph text in
+            different format.</li>
+        <li>&lt;span&gt; tag doesn’t offer any visual properties in itself. One has to provide visual properties
+            using CSS.</li>
+    </ul>
+        <h3>&lt;p&gt;…&lt;/p&gt;</h3>
+        <p>This tag is used to display plain text as it is.</p>
+        <h3>Nuggets:</h3>
+    <ul>
+        <li>Browsers automatically put some space/margin before and after each <p> element. This behavior of
+            browser can be modified using CSS margin-left/right. </li>
+    </ul>
+        <h3>&lt;br/&gt;</h3>
+        <p>This tag inserts a single line break wherever placed. It is an empty tag with no closing tag.
+            In HTML/HTML5 &lt;br&gt; is sufficient but in XHTML, properly closed &lt;br/&gt; is expected.<br>
+             &lt;br/&gt; tag doesn’t display a line, instead use &lt;hr/&gt; tag</p>
+
+        <h3>&lt;hr/&gt;</h3>
+    <p>This tag displays a single line break wherever placed. It is an empty tag with no closing tag.</p>
+        
+    <h2>Example</h2> 
+    <pre>&lt;p&gt;Text with different color: &lt;span style=”color: red”&gt;red apple &lt;/span&gt; and &lt
+        span style=”color yellow;”&gt;yellow mango &lt;/span&gt; &lt;/p&gt;
+    </pre>          
+    
+        <h2>Text Formatting Tags</h2>
+        <h3>Following are phrase or emphasis tags.</h3>
+        <h3>&lt;strong&gt;…&lt;/strong&gt;</h3>
+        <p>Used to make enclosed text bold.</p>
+                
+        <h3>&lt;em&gt;…&lt;/em&gt;</h3>
+        <p>Displays texts in italic</p>
+        <h3>&lt;small&gt;…&lt;/small&gt;</h3>
+        <p>Used to make enclosed text smaller.</p>
+        <h3>&lt;sup&gt;…&lt;/sup&gt;</h3>
+        <p>Used for writing superscript(smaller font of height half and above the normal line. It is used 
+        to write footnotes or<br> references like USA[1])</p>
+        <h2>Example</h2>
+    <pre>
+     &lt;abbr title=”United States of America”> USA &lt;/abbr&lt; consists of 50 states. &lt;blockquote 
+     cite=”https://en.wikipedia.org/wiki/United_States”>, USA consists of 50 states and consists of North<br>
+     America and Alaska<br> &lt;/blockquote&lt; &lt;p&lt;&lt;dfn>USA&lt;/dfn&lt; consists of 50 state&lt;/p&lt;    
+    </pre>
+        <h3>&lt;blackquote&gt;…&lt;/blackquote&gt;</h3>
+        <p>Used to specify a section which is quoted from other source, reference or documents whose hyperlink
+        is provided to ‘cite’ attribute in<br> &lt;blockquote&gt; tag. Refer example.</p>
+        <h3>&lt;cite&gt;…&lt;/cite&gt</h3>
+        <p>Used to cite author, reference or document or a quote.<p>
+        <h3>&lt;b&gt;…&lt;/b&gt;</h3>
+        <p>Used to make enclosed text bold.</p>
+        <h3>&lt;address&gt;…&lt;/address&gt;</h3>
+        <p>Used to specify contact information for the author/owner</p>
+        <h3>&lt;abbr&gt; … &lt;/abbr&gt;</h3>
+        <p>Used to define an abbreviation or acronym</p>
+        <h3>&lt;del&gt;…&lt;/del&gt;</h3>
+        <p>Used to define text that is deleted from the original</p>
+        
+        <h2>Image Tag</h2>
+        <h3>&lt;img&gt;…&lt;img/&gt;</h3>
+            <p>Used to insert and display image in webpage with
+                desired height, width, position.
+                </p>
+    </div3>             
+
+    <div4 class="column4">
+        <h2>List Tags</h2>
+        <h3>&lt;ul&gt;…&lt;/ul&gt;</h3>
+        <p>Used to define an unordered list.</p>
+        <h3>&lt;ol&gt;…&lt;/ol&gt;</h3>
+        <p>Used to define an ordered list.</p>
+        <h3>&lt;li&gt;…&lt;/li&gt;</h3>
+        <p>Used to define list item.</p>
+        <h3>&lt;dl&gt;…&lt;/dl&gt;</h3>
+        <p>Used to define a description list.</p>
+        <h3>&lt;dt&gt;…&lt;/dt&gt;</h3>
+        <p>Used to define a term in the description list.</p>
+        <h3>&lt;dd&gt;…&lt;/dd&gt;</h3>
+        <p>Used to define a description for the term in the</p>
+        <h2>Example</h2>
+    <pre>
+        &lt;ol type="1" start="50" reversed>
+        &lt;li&gt;Coffee&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Milk&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;ul&gt;
+        &lt;li&gt;Coffee&lt;/li&gt;
+        &lt;li&gt;Tea&lt;/li&gt;
+        &lt;li&gt;Milk&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;dl&gt;
+        &lt;dt&gt;Coffee&lt;/dt&gt;
+        &lt;dd&gt;Black hot drink&lt;/dd&gt;
+        &lt;dt&gt;Milk&lt;/dt&gt;
+        &lt;dd&gt;White cold drink&lt;/dd&gt;
+        &lt;/dl&gt;
+    </pre>
+        <h3>&lt;form&gt;… &lt;/form&gt;</h3>
+        <p>Used for creating HTML form for user to input. Form elements contain several elements(like input box,
+           textarea, button, select menu etc) to let user input the data.</p>
+        <h2>Other child elements of &lt;Form&gt;</h2>
+        <h3>&lt;fieldset&gt;…&lt;/fieldset&gt;</h3>
+        <p>Used to group related elements inside form as one
+        entity and enclose them inside box</p>
+        <h3>&lt;legend&gt;…&lt;/legend&gt;</h3>
+        <p>Used to define a caption for the &lt;fieldset&gt;</p>
+        <h3>&lt;label&gt;…&lt;/label&gt;</h3>
+        <p>Used to define a label for the form control</p>
+        <h3>&lt;input&gt;…&lt;/input&gt;</h3>
+        <p>Used to create input box for user to input data.</p>
+        <h3>&lt;textarea&gt;…&lt;/textarea&gt;</h3>
+        <p>Used to create a multi-line input box for user to</p>
+        <h3>&lt;select&gt;…&lt;/select&gt;</h3>
+        <p>Used to create a drop-down list for user to select</p>
+        <h3>&lt;option&gt;…&lt;/option&gt;</h3>
+        <p>Used to define an option in the drop-down list</p>
+        <h3>&lt;button&gt;…&lt;/button&gt;</h3>
+        <p>Used to create a button for user to click</p>
+        <h2>Example</h2>
+    <pre>
+        &lt;form&gt;
+         &lt;fieldset&gt;
+            &lt;legend&gt;Personalia:&lt;/legend&gt;
+            Name: &lt;input type="text">&lt;br&gt;
+            Email: &lt;input type="text">&lt;br&gt;
+            Date of birth: &lt;input type="date">&lt;br/&gt;
+            Occupation:
+            &lt;select&gt;
+            &lt;option value="student"&gt;Student&lt;/option&gt;
+            &lt;option value="professional"&gt;Professional&lt;/option&gt;
+            &lt;option value="retired"&gt;Retired&lt;/option&gt; &lt;option
+            value="others" disabled>Others&lt;/option&gt;
+            &lt;/select&gt;&lt;br/&gt;
+            &lt;textarea name="comments"&gt;Comments&lt;/textarea&gt;&lt;br/&gt;
+            &lt;input type="submit" value="Submit"&gt;
+            &lt;/fieldset&gt;
+    </pre>
+    <pre>
+        &lt;select&gt;
+         &lt;optgroup label="Swedish Cars"&gt;
+          &lt;option value="volvo">Volvo&lt;/option&gt;
+            &lt;option value="saab">Saab&lt;/option&gt;
+             &lt;/optgroup&gt;
+            &lt;optgroup label="German Cars"&gt;
+            &lt;option value="mercedes">Mercedes&lt;/option&gt;
+            &lt;option value="audi">Audi&lt;/option&gt;
+            &lt;/optgroup&gt;  
+    </pre>
+        <h2>Achor Tag</h2>
+        <h3>&lt;a href=””&gt; … &lt;/a&gt;</h3>
+        <p>Used for define a destination hyperlink, which gets loaded when anchor text/image or element is clicked.</p>
+        <h3>&lt;a href=”mailto:contact@snippetnuggets.com”&gt; … &lt;/a&gt;</h3>
+        <p>Used initiating the mail sending to specified mail-id when anchor link is clicked. </p>
+        <h3>&lt;a href=”tel://###,#####”&gt; … &lt;/a&gt;</h3>
+        <p>Used for initiating a phone call to number specified. It is useful when webpage is accessed from mobile
+         phone and link is clicked.</p>
+        <h3>&lt;a name=”name”&gt; … &lt;/a&gt;</h3>
+        <p>Used for initiating a phone call to a number specified.It is useful when webpage is accessed from mobile
+           phone and link is clicked..</p>
+        <h2>Table Tag</h2>
+        <h3>&lt;table&gt; … &lt;/table&gt;</h3>
+        <p>Used to create table in webpage. Inside &lt;table&gt; element there are one or more &lt;th&gt;(table header),
+          &lt;tr&gt;(table row) and &lt;td&gt;(table data) elements. A more complex HTML table may also include &lt;caption>,<br>
+          &lt;col&gt;, &lt;colgroup&gt;,&lt;thead>, &lt;tfoot&gt;, and &lt;tbody&gt; elements.</p>
+        <h3>&lt;caption&gt; … &lt;/caption&gt;</h3>
+        <p>Used to provide description of table. &lt;caption&gt; tag must be inserted immediately after &lt;table&gt; tag.</p>
+        
+        <h3>Nuggets:</h3>
+    <ul>
+        <li>Only one caption per table is allowed.</li>
+        <li>By default, a table caption will be center-aligned above a table. However, the CSS properties‘text-align’ and 
+            ‘caption-side’ can be used to align and place the caption.</li>
+    </ul>
+        <h3>&lt;thead&gt; … &lt;/thead&gt;</h3>
+        <p>Used to group the header content in a table.</p>
+                
+        <h3>Nuggets:</h3>
+    <ul>
+        <li>The &lt;thead&gt; element is used in conjunction with the &lt;tbody&gt;and &lt;tfoot&gt;elements to specify each
+             part of a table (header, body,footer). The &lt;thead&gt; tag must be used in the following context: As a child <br>
+             of a &lt;table&gt; element, after any &lt;caption>, and &lt;colgroup&gt; elements, and before any &lt;tbody>,
+              &lt;tfoot&gt;, and &lt;tr&gt; elements.
+        </li>
+    </ul>
+        <h3>&lt;tbody&gt; … &lt;/tbody&gt;</h3>
+        <p>Used to group the body content in a table.</p>
+        <h3>&lt;tfoot&gt;…&lt;/tfoot&gt;</h3>
+        <p>Used to group the footer content in a table.</p>
+        <h3>&lt;tr&gt; … &lt;/tr&gt;</h3>
+        <p>Used to create a table row.</p>
+        <h3>&lt;th&gt; … &lt;/th&gt;</h3>
+        <p>Used to create a table header cell.</p>
+        <h3>&lt;td&gt; … &lt;/td&gt;</h3>
+        <p>Used to create a single cell in table which contains actual data.</p>
+        <h3>&lt;col&gt; … &lt;/col&gt;</h3>
+        <p>Used to define a column in a table.</p>
+        <h3>&lt;colgroup&gt; … &lt;/col&gt;</h3>
+        <p>Used to group, or band, one or more columns in a</p>
+        <h3>&lt;object&gt; … &lt;/object&gt;</h3>
+        <p>Used to embed an external application or an applet</p>
+
+    </div4>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        </script>
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+            
+            function openmenu(){
+                sidemenu.style.right = "0";
+            }
+            function closemenu(){
+                sidemenu.style.right = "-200px";
+                }
+            
+        </script>
+            
+</body>
+</html>

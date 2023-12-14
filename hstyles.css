@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+.container{
+  display: inline-block;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.sub-title,h1{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    margin:20px 20px;
+    color: orange;
+}
+.reading-technological-books p{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    line-height: 2em;
+    color: orange;
+    padding: 0px 10px;
+    margin: 20px 10px;
+
+}
+.reading-technological-books img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.reading-technological-books:hover img{
+    transform:scale(1.1);
+
+} 
+.playing-musical-instruments p{
+    font-size: 1.5rem;
+    width: 100%;
+    color: orange;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    margin: 30px;
+}
+.playing-musical-instruments img{
+    border-radius: 10px;
+    transition: transform 0.5s;
+    width: 100%;
+}
+.playing-musical-instruments:hover img{
+    transform:scale(1.1);
+
+}
+.playing-soccer p{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    line-height: 2em;
+    color: orange;
+    padding: 0px 10px;
+    text-align: center;
+}
+.playing-soccer img{
+    border-radius: 10px;
+    transition: transform 0.5s;
+    width: 100%;
+}
+.playing-soccer:hover img{
+    transform: scale(1.1);
+}
+.playing-soccer::after {
+    content: '';
+    z-index: -1;
+    top: 40%;
+    left: 87%;
+    bottom: 0;
+    right: 0;
+    opacity: 0.6;
+    position: absolute;
+}
+.listening-to-music p{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    line-height: 2em;
+    color: orange;
+    padding: 0px 10px;
+    text-align: center;
+}
+.listening-to-music img{
+    border-radius: 10px;
+    transition: transform 0.5s;
+    width: 100%;
+}
+.listening-to-music:hover img{
+    transform: scale(1.1);
+}
+.making-friends p{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    line-height: 2em;
+    color: orange;
+    padding: 0px 10px;
+    text-align: center;
+}
+.making-friends img{
+    border-radius: 10px;
+    transition: transform 0.5s;
+    width: 100%;
+}
+.making-friends:hover img{
+    transform: scale(1.1);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin:10px 20px;
+  }
+  nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+  }
+  
+  nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: orange; 
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+  }
+  nav ul li a:hover::after{
+    width: 100%;
+  }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hstyles.css"> 
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <h1 class="logo"></h1>
+        <ul id="sidemenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hobbies.html">Hobbies/Interests</a></li>
+            <li><a href="cheatsheet.html">Cheatsheet</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-bars" onclick="openmenu()"></i>
+    </nav>
+    
+
+    <h1 class="sub-tittle">Interests/Hobbies</h1>
+    <div class="container">
+    <div class="reading-technological-books">
+        <img src="./images/Reading technological books.jpeg">
+        <p>Reading Technological Books</p>
+    </div>
+    <div class="playing-musical-instruments">
+        <img src="./images/playing musical instruments.jpeg">
+        <p>Playing Musical Instruments</p>
+        </div>
+        <div class="playing-soccer">
+            <img src="./images/playing soccer.jpeg">
+            <p>Playing Soccer</p>
+        </div>
+        <div class="listening-to-music">
+            <img src="./images/listening to music.jpeg">
+            <p>Listening to Music</p>
+        </div>
+        <div class="making-friends">
+            <img src="./images/Making friends.jpeg">
+            <p>Making Friends</p>
+        </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+        
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+            </script>
+            <script>
+                var sidemenu = document.getElementById("sidemenu");
+                
+                function openmenu(){
+                    sidemenu.style.right = "0";
+                }
+                function closemenu(){
+                    sidemenu.style.right = "-200px";
+                    }
+                
+            </script>
+    
+    
+</body>
+</html>

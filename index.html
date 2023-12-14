@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.flaticon.com/free-icons/social-media">
+    <script src="https://kit.fontawesome.com/f73030f0a7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo"></h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="hobbies.html">Hobbies/Interests</a></li>
+                    <li><a href="cheatsheet.html">Cheatsheet</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Development Student</p>
+                <h1>Hi, I'm<span>Gary Simwawa From Canada</span><br></h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/Cover Gary2.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm a software development student at Bow Valley College with a passion for learning and developing new skills in programming languages such as JavaScript, C++, HTML, and CSS. My journey in the world of software development has been an exciting one, and I'm eager to share my skills and experiences. I am currently learning programming languages including JavaScript, C++, HTML, and CSS. I'm enthusiastic to contribute to initiatives that advance technology and deliver exceptional user experiences. I thrive in fast-paced environments, where problem-solving and teamwork are at the core. I'm always up for a challenge and love the satisfaction of turning complex problems into elegant, efficient solutions.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web Pages</li>
+                            <li><span>Programming Languages</span><br>Html, CSS, Javascript, C++ </li>
+                            <li><span>Customer Service</span><br>able to understand customer needs and address concerns</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>2023 - present</span><br>Academic Projects</li>
+                    <li><span>2018 - 2022</span><br>Sales Associate at Pep Stores</li>
+                    <li><span>2016 - 2017</span><br>General Maintenance worker at AC Detailing</li>
+                
+                </ul>
+                </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 - present</span><br>Software Development at Bow Valley College</li>
+                            <li><span>2015</span><br>Mechanical Fitting from Northern Technical College</li>
+                            <li><span>2010</span><br>High School Diploma from Chankwa High</li>
+                        </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-shirt"></i>
+                    <h2>Product Knowledge</h2>
+                    <p> A deep understanding of the products or services being sold is vital. Sales associates should be well-versed in the features, specifications, and benefits of what they're selling.   
+                    </p>
+                    <a href="https://www.indeed.com/career-advice/career-development/products-knowledge">Learn more</a>
+                </div>
+            <div>
+                <i class="fa-solid fa-person-military-pointing"></i>
+                <h2>Customer service</h2>
+                <p> able to understand customer needs, address concerns, and ensure customer satisfaction is essential for sales success.   
+                </p>
+                <a href="https://www.forbes.com/advisor/business/what-is-customer-service-definition-best-practices/">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-microchip"></i>
+                <h2>Technology Skills</h2>
+                <p> CRM systems, and other software is increasingly important in modern sales environments   
+                </p>
+                <a href="https://www.coursera.org/articles/technology-skills">Learn more</a>
+               </div>    
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work1.jpg">
+                    <div class="layer">
+                        <h3>Customer Service</h3>
+                        <p>Providing excellent customer service is crucial. Being able to understand customer needs, address concerns, and ensure customer satisfaction is essential for sales success.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work2.jpg">
+                    <div class="layer">
+                        <h3>Product Knowledge</h3>
+                        <p>A deep understanding of the products or services being sold is vital. Sales associates should be well-versed in the features, specifications, and benefits of what they're selling.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work3.jpg">
+                    <div class="layer">
+                        <h3>Ethical Conduct</h3>
+                        <p>Maintaining integrity and ethical standards in sales practices builds trust and credibility with customers.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- <a href="#" class="btn">See More</a> -->
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <P><i class="fa-regular fa-paper-plane"></i>garylarry23@gmail.com</P>
+                    <p><i class="fa-solid fa-phone"></i>+18258834613</p>
+                    <div class="social-icons">
+                        <a href="http://facebook.com/"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/GaryLarry6"><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://www.instagram.com/garylarry6/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/gary-simwawa-5816b0ba/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/GSimwawa Resume-2023.pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright <i class="fa-regular fa-copyright"></i>Gary Larry.</p>
+        </div>
+    </div>
+  <script src="script.js"></script>
+    
+</body>
+</html>
