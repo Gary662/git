@@ -27,7 +27,7 @@
             </nav>
             <div class="header-text">
                 <p>Software Development Student</p>
-                <h1>Hi, I'm<span>Gary Simwawa From Canada</span><br></h1>
+                <h1>Hi, I'm<span> Gary Simwawa</span> <br>From Canada<br></h1>
             </div>
         </div>
     </div>
@@ -35,7 +35,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="./images/Cover Gary2.jpg">
+                    <img src="./images/new bout.jpg">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -129,7 +129,7 @@
                     </div>
                 </div>
             </div>
-            <!-- <a href="#" class="btn">See More</a> -->
+            <a href="https://www.instagram.com/garylarry6/" class="btn">See More</a>
         </div>
     </div>
     <div id="contact">
@@ -163,6 +163,24 @@
         </div>
     </div>
   <script src="script.js"></script>
+  <script>
+    const scriptURL = '<https://script.google.com/macros/s/AKfycbwalamCwJ63eWtCxE7pb_7zXCZylFlSwdjNek72FQ5t6x0JtFHMOS6KyqLgB2Ig_yUaNw/exec>'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },6000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
     
 </body>
 </html>

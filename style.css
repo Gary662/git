@@ -1,95 +1,101 @@
-* {
-    margin-left: 15px;
+*{
+    margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
 }
-
-body {
+body{
     background: #080808;
     color: #fff;
-    overflow-x: hidden; 
 }
-
-#header {
+#header{
     width: 100%;
+    height: 100vh;
+    background-image: url(./images/Cover\ Gary2.jpg);
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.container{
+    padding:10px 10%;
+
+}
+nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 10%;
-}
-.header, span{
-    color: orange;
-}
-
-.header-text{
-    font-size: 30px;
-}
-.container {
-    width: 65%;
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-
 }
-
-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 200px;
-    height: 100vh;
-    background: orange;
-    padding-top: 50px;
-    z-index: 2;
-    transition: right 0.5s;
+.logo{
+    width: 140px;
+    
 }
-
-nav ul {
-    padding: 0;
-    margin: 0;
+nav ul li{
+    display: inline-block;
     list-style: none;
+    margin:10px 20px;
 }
-
-nav ul li {
-    margin: 25px;
-}
-
-nav ul li a {
+nav ul li a{
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+    position: relative;
 }
 
-nav .fas {
-    display: block;
-    font-size: 25px;
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: orange; 
     position: absolute;
-    top: 25px;
-    left: 25px;
-    cursor: pointer;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
 }
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: orange;
+}
+/* ------------about------- */
+#about{
+    padding:80px 0 ;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
 
-.sub-title {
+}
+.sub-title{
     font-size: 60px;
     font-weight: 600;
     color: #fff;
 }
-
-
-.about-col-1 img {
-    width: 75%;
-    height: auto;
-    border-radius: 15px;
-}
-
 .tab-titles{
     display: flex;
     margin:20px 0 40px;
@@ -128,7 +134,7 @@ nav .fas {
 .tab-contents.active-tab{
     display: block;
 }
-
+/* ---------services-------- */
 #services{
     padding: 30px 0;
 }
@@ -167,6 +173,7 @@ nav .fas {
     background: orange;
     transform: translateY(-10px) ;
 }
+/* ----------portfolio--------- */
 #portfolio{
     padding: 50px 0;
 }
@@ -242,7 +249,7 @@ nav .fas {
 .btn:hover{
     background: orange;
 }
-
+/* ------contact---- */
 .contact-left{
     flex-basis:35%;
 }
@@ -307,30 +314,26 @@ form .btn2{
 .copyright i{
     color:orange;
 }
-
+/* -----------CSS for small screens------------- */
 nav .fas{
     display: none;
 }
-@media only screen and (max-width: 600px) {
-    /* Adjustments for smaller screens */
-    #header {
-        background-image: url(images/blue-polygon-dark-background_53876-118498.avif);
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/Cover\ Gary2.jpg)
     }
-    .header-text {
-        margin-top: 100%;
+    .header-text{
+        margin-top:100%;
         font-size: 16px;
     }
-    .header-text h1 {
+    .header-text h1{
         font-size: 30px;
     }
-    nav {
-        display: none;
-    }
-    nav .fas {
+    nav .fas{
         display: block;
         font-size: 25px;
     }
-    nav ul {
+    nav ul{
         background: orange;
         position: fixed;
         top: 0;
@@ -341,43 +344,42 @@ nav .fas{
         z-index: 2;
         transition: right 0.5s;
     }
-    nav ul li {
-        display: block;
+    nav ul li{
+        display:block;
         margin: 25px;
     }
-    .sub-title {
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
         font-size: 40px;
     }
-    .about-col-1,
-    .about-col-2 {
-        flex-basis: 100%;
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;  
     }
-    .about-col-1 {
+    .about-col-1{
         margin-bottom: 30px;
-        flex-basis: 25%;
-        margin-right: 30px;
     }
-    .about-col-2 {
+    .about-col-2{
         font-size: 14px;
     }
-    .tab-links {
+    .tab-links{
         font-size: 16px;
-        margin-right: 20px;
+        margin-right: 20px; 
     }
-    .contact-left,
-    .contact-right {
-        flex-basis: 100%;
+    .contact-left, .contact-right{
+      flex-basis: 100%;
     }
-    .container {
-        width: 100%;
-    }
-    .copyright {
+    .copyright{
         font-size: 14px;
     }
-}
 
-#msg {
+}
+#msg{
     color: #61b752;
     margin-top: -40px;
-    display: inline-block;
+    display: block;
 }
